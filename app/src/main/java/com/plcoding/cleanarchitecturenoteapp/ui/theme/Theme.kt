@@ -1,4 +1,4 @@
-package com.thesgjtech.hibi.ui.theme
+package com.plcoding.cleanarchitecturenoteapp.ui.theme
 
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
@@ -7,14 +7,14 @@ import androidx.compose.ui.graphics.Color
 
 private val DarkColorPalette = darkColors(
     primary = Color.White,
-    background = Color.DarkGray, // Fix: Use Color.DarkGray instead of DarkGray
+    background = DarkGray,
     onBackground = Color.White,
-    surface = Color.LightBlue, // Fix: Use Color.LightBlue instead of LightBlue
-    onSurface = Color.DarkGray // Fix: Use Color.DarkGray instead of DarkGray
+    surface = LightBlue,
+    onSurface = DarkGray
 )
 
 @Composable
-fun HibiTheme(darkTheme: Boolean = true, content: @Composable() () -> Unit) {
+fun CleanArchitectureNoteAppTheme(darkTheme: Boolean = true, content: @Composable() () -> Unit) {
     MaterialTheme(
         colors = DarkColorPalette,
         typography = Typography,

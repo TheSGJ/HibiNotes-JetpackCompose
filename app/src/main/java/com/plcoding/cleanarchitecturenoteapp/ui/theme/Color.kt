@@ -1,4 +1,4 @@
-package com.thesgjtech.hibi.ui.theme
+package com.plcoding.cleanarchitecturenoteapp.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
