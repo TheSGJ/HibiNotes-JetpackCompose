@@ -1,11 +1,11 @@
-package com.plcoding.cleanarchitecturenoteapp.di
+package com.thesgjtech.hibi.di
 
 import android.app.Application
 import androidx.room.Room
-import com.thesgjtech.hibi.data.data_source.NoteDatabase
-import com.thesgjtech.hibi.data.repository.NoteRepositoryImpl
-import com.thesgjtech.hibi.domain.repository.NoteRepository
-import com.thesgjtech.hibi.domain.use_case.*
+import com.thesgjtech.hibi.feature_note.data.data_source.NoteDatabase
+import com.thesgjtech.hibi.feature_note.data.repository.NoteRepositoryImpl
+import com.thesgjtech.hibi.feature_note.domain.repository.NoteRepository
+import com.thesgjtech.hibi.feature_note.domain.use_case.*
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -19,11 +19,11 @@ object AppModule {
     @Provides
     @Singleton
     fun provideNoteDatabase(app: Application): NoteDatabase {
-       return Room.databaseBuilder(
-                app,
-                NoteDatabase::class.java,
-                NoteDatabase.DATABASE_NAME
-            ).build()
+        return Room.databaseBuilder(
+            app,
+            NoteDatabase::class.java,
+            NoteDatabase.DATABASE_NAME
+        ).build()
     }
 
     @Provides
@@ -37,9 +37,9 @@ object AppModule {
     fun provideNoteUseCases(repository: NoteRepository): NoteUseCases {
         return NoteUseCases(
             getNotes = GetNotes(repository),
-            deleteNote = DeleteNote(repository)
-            addNote = AddNote(repository)
-            gettNote = GetNote(repository)
+            deleteNote = DeleteNote(repository),
+            addNote = AddNote(repository),
+            getNote = GetNote(repository)
         )
     }
 }
