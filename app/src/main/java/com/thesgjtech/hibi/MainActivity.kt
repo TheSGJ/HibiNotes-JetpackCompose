@@ -1,4 +1,4 @@
-package com.plcoding.cleanarchitecturenoteapp
+package com.thesgjtech.hibi
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -8,13 +8,13 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.plcoding.cleanarchitecturenoteapp.ui.theme.CleanArchitectureNoteAppTheme
+import com.thesgjtech.hibi.ui.theme.HibiNotesTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            CleanArchitectureNoteAppTheme {
+            HibiNotesTheme {
                 Text(text = "Hello Jetpack Compose!")
             }
         }

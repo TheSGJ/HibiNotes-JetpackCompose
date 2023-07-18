@@ -1,4 +1,4 @@
-package com.plcoding.cleanarchitecturenoteapp
+package com.thesgjtech.hibi
 
 import org.junit.Test
 
