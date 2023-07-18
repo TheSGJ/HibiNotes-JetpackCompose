@@ -6,6 +6,7 @@ plugins {
 }
 
 android {
+    namespace 'com.thesgjtech.hibi'
     compileSdk 33
     defaultConfig {
         applicationId "com.thesgjtech.hibi"
