@@ -12,7 +12,7 @@ class GetNotes(
 ) {
     operator fun invoke(
         noteOrder: NoteOrder = NoteOrder.Date(OrderType.Decending)
-    ): Flow<List<Note> {
+    ): Flow<List<Note>> {
         return repository.getNotes().map { notes ->
             when (noteOrder.orderType) {
                 is OrderType.Ascending -> {
@@ -26,8 +26,6 @@ class GetNotes(
                     is NoteOrder.Date -> notes.sortedByDescending { it.timestamp}
                     is NoteOrder.Color -> notes.sortedByDescending { it.color }
                 }
-
-                
             }
         }
     }
