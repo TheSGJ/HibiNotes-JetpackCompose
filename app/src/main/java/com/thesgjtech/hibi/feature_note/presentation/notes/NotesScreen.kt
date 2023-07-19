@@ -9,6 +9,7 @@ import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Sort
+import androidx.compose.material.icons.filled.AutoFixHigh
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
@@ -74,7 +75,7 @@ fun NotesScreen(
                     },
                 ) {
                     Icon(
-                        imageVector = Icons.Default.Sort,
+                        imageVector = Icons.Default.AutoFixHigh,
                         contentDescription = "Sort"
                     )
                 }
