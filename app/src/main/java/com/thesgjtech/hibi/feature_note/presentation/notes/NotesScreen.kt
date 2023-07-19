@@ -55,7 +55,7 @@ fun NotesScreen(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = "Your note",
+                    text = "Hibi Notes",
                     style = MaterialTheme.typography.h4
                 )
                 IconButton(
@@ -64,7 +64,7 @@ fun NotesScreen(
                     },
                 ) {
                     Icon(
-                        imageVector = Icons.Default.Sort,
+                        imageVector = Icons.Default.More_Horiz,
                         contentDescription = "Sort"
                     )
                 }
