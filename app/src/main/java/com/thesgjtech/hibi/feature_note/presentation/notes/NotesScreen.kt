@@ -14,6 +14,8 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Color.Companion.White
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.thesgjtech.hibi.feature_note.presentation.notes.components.NoteItem
@@ -42,7 +44,15 @@ fun NotesScreen(
                 Icon(imageVector = Icons.Default.Add, contentDescription = "Add note")
             }
         },
-        scaffoldState = scaffoldState
+        scaffoldState = scaffoldState,
+        snackbarHost = {
+            SnackbarHost(it){ data ->
+                Snackbar(
+                    actionColor = MaterialTheme.colors.primary,
+                    snackbarData = data
+                )
+            }
+        }
     ) {
         Column(
             modifier = Modifier
